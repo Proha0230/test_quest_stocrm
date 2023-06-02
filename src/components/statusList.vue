@@ -4,7 +4,7 @@
         <div v-for="item in dataStatus" :key="dataStatus" class="statusListItem">
             <div>
                 <h4> {{ item.TITLE }} </h4>
-                <p>{{ orders(item.TITLE).value.length }} {{ orders(item.TITLE).value.length %2 ? "Сделка" : "Сделок"}}</p>
+                <p>{{ orders(item.TITLE).value.length }} {{ orders(item.TITLE).value.length %2 ? "Сделка" : "Сделок"}} на сумму 0.00 ₽</p> <!-- забыл сделать сумму, только в конце вспомнил, но реализовать бы смог :)) -->
                 <button class="hiddenOn" v-if="item.TO_HIDE === 'Y'"></button>
             </div>
             <statusItem
